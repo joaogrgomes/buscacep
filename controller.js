@@ -14,7 +14,7 @@ function run (event) {
     zipcode = zipcode.trim()
 
     axios
-    .get('http://viacep.com.br/ws/' + zipcode + '/json')
+    .get('https://viacep.com.br/ws/' + zipcode + '/json')
     .then(function (response) {
         if (response.data.erro) {
             throw new Error ('CEP inválido')
